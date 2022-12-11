@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="245.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectopractica.proyectopractica.controller.LoginController">
+   <children>
+      <Pane layoutX="22.0" layoutY="18.0" prefHeight="216.0" prefWidth="547.0">
+         <children>
+            <Button layoutX="246.0" layoutY="102.0" mnemonicParsing="false" onAction="#abrirVentana" text="Acceso" />
+            <Label layoutX="169.0" layoutY="3.0" text="Software de manejo datos">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="212.0" layoutY="33.0" text="Universidad del Bío-Bío" />
+            <Label layoutX="214.0" layoutY="166.0" text="Martin Araneda Acuña" textFill="#0073ff" />
+            <Label layoutX="245.0" layoutY="183.0" text="ICINF 2021" textFill="#0073ff" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

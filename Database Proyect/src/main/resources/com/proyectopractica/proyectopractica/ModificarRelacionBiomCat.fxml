@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectopractica.proyectopractica.controller.modificar.ModificarRelacionBiomCatController">
+    <children>
+        <Pane layoutX="12.0" layoutY="31.0" prefHeight="353.0" prefWidth="577.0">
+            <children>
+                <Label layoutX="14.0" layoutY="41.0" text="modificar donde:" />
+                <ComboBox fx:id="combo1" layoutX="116.0" layoutY="37.0" prefWidth="150.0" />
+                <Label layoutX="122.0" layoutY="14.0" text="Relac Biom/Cat" />
+                <Label layoutX="275.0" layoutY="41.0" text="sea" />
+                <TextField fx:id="modificarbiomcattf" layoutX="302.0" layoutY="37.0" />
+                <Label layoutX="302.0" layoutY="14.0" text="Nueva relacion biom/cat" />
+                <Label layoutX="14.0" layoutY="86.0" text="Visualizar Tabla" />
+                <Button layoutX="104.0" layoutY="82.0" mnemonicParsing="false" onAction="#verTabla" text="Ver" />
+                <TableView fx:id="tablaRelacionx" layoutX="4.0" layoutY="107.0" prefHeight="243.0" prefWidth="559.0">
+                    <columns>
+                        <TableColumn prefWidth="97.0" text="Relacion Biom/Cat">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="relacbiomcata" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <Button layoutX="466.0" layoutY="37.0" mnemonicParsing="false" onAction="#modificarRelacion" text="Modificar" />
+            </children>
+        </Pane>
+        <Label layoutX="255.0" layoutY="14.0" text="Modificar Relacion" />
+    </children>
+
+
+</AnchorPane>

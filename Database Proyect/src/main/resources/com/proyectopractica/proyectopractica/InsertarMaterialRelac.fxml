@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectopractica.proyectopractica.controller.insertar.InsertarMaterialRelacController">
+    <children>
+        <Pane layoutX="14.0" layoutY="14.0" prefHeight="480.0" prefWidth="458.0">
+            <children>
+                <Label layoutX="163.0" layoutY="14.0" text="Agregar Material Relac.">
+                </Label>
+                <Label layoutX="14.0" layoutY="59.0" text="Nombre del Material" />
+                <TextField fx:id="nombrematerialtf" layoutX="153.0" layoutY="55.0" />
+                <Button layoutX="199.0" layoutY="99.0" mnemonicParsing="false" onAction="#agregarMaterial" text="Insertar" />
+                <Label layoutX="14.0" layoutY="176.0" text="Mostrar tabla:" />
+                <Button layoutX="98.0" layoutY="172.0" mnemonicParsing="false" onAction="#mostrarTabla" text="Ver" />
+                <TableView fx:id="tablaMaterial" layoutX="7.0" layoutY="216.0" prefHeight="247.0" prefWidth="426.0">
+                    <columns>
+                        <TableColumn prefWidth="101.0" text="Material Relac.">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="material_relac" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </children></Pane>
+    </children>
+
+</AnchorPane>

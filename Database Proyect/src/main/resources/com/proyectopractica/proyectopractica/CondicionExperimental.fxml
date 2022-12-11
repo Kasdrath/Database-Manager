@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="649.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectopractica.proyectopractica.controller.CondicionExperimentalController">
+   <children>
+      <Label layoutX="286.0" layoutY="14.0" text="Condiciones experimentales">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="19.0" layoutY="94.0" text="Nombre. Experimento" />
+      <TextField fx:id="nombrexpTF" layoutX="18.0" layoutY="122.0" />
+      <Label layoutX="19.0" layoutY="159.0" text="Catalizador" />
+      <ComboBox fx:id="comboCata" layoutX="18.0" layoutY="188.0" prefWidth="150.0" />
+      <Label layoutX="261.0" layoutY="94.0" text="Material Relac" />
+      <ComboBox fx:id="comboMate" layoutX="224.0" layoutY="122.0" prefWidth="150.0" />
+      <Pane fx:id="pane" layoutX="452.0" layoutY="93.0" prefHeight="249.0" prefWidth="328.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" text="Compuesto Quimico" />
+            <TextField fx:id="agregarcompuestoTF" layoutX="16.0" layoutY="42.0" />
+            <Label layoutX="15.0" layoutY="93.0" text="Porcentaje de Area" />
+            <TextField fx:id="porcentTF" layoutX="17.0" layoutY="117.0" />
+            <Button layoutX="16.0" layoutY="197.0" mnemonicParsing="false" onAction="#nuevoExperimento" text="nuevo experimento" />
+            <Button layoutX="19.0" layoutY="158.0" mnemonicParsing="false" onAction="#agregarExperimento" text="agregar" />
+            <Button layoutX="182.0" layoutY="42.0" mnemonicParsing="false" onAction="#revisarExistencia" text="Revisar Existencia" />
+         </children>
+      </Pane>
+      <Button layoutX="17.0" layoutY="317.0" mnemonicParsing="false" onAction="#habilitarIngreso" text="Habilitar Ingreso Datos" />
+      <Label layoutX="229.0" layoutY="159.0" text="Tasa Calent." />
+      <ComboBox fx:id="comboTasa" layoutX="224.0" layoutY="188.0" prefWidth="150.0" />
+      <Label layoutX="19.0" layoutY="230.0" text="Temp. Pirolisis" />
+      <ComboBox fx:id="comboTemp" layoutX="20.0" layoutY="254.0" prefWidth="150.0" />
+      <TableView fx:id="tablaDatos" layoutX="18.0" layoutY="435.0" prefHeight="200.0" prefWidth="763.0">
+        <columns>
+          <TableColumn prefWidth="138.0" text="Nombre Experimento">
+           <cellValueFactory>
+              <PropertyValueFactory property="nombre_exp" />
+           </cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="131.0" text="Catalizador">
+           <cellValueFactory>
+              <PropertyValueFactory property="catalizador" />
+           </cellValueFactory>
+          </TableColumn>
+           <TableColumn prefWidth="94.0" text="Temp. Pirolisis">
+              <cellValueFactory>
+                 <PropertyValueFactory property="temp_pirolisis" />
+              </cellValueFactory>
+           </TableColumn>
+           <TableColumn prefWidth="134.0" text="Tasa Calentamiento">
+              <cellValueFactory>
+                 <PropertyValueFactory property="tasa_calent" />
+              </cellValueFactory>
+           </TableColumn>
+           <TableColumn prefWidth="127.0" text="Material Relac">
+              <cellValueFactory>
+                 <PropertyValueFactory property="material_relac" />
+              </cellValueFactory>
+           </TableColumn>
+            <TableColumn prefWidth="127.0" text="Nombre Comp.Quimico">
+                <cellValueFactory>
+                    <PropertyValueFactory property="compq_name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="127.0" text="Porcent.Área">
+                <cellValueFactory>
+                    <PropertyValueFactory property="porcentarea" />
+                </cellValueFactory>
+            </TableColumn>
+
+
+        </columns>
+      </TableView>
+      <Label layoutX="18.0" layoutY="394.0" text="Ver experimentos ingresados" />
+      <Button layoutX="178.0" layoutY="390.0" mnemonicParsing="false" onAction="#verTabla" text="Ver" />
+      <Button layoutX="440.0" layoutY="390.0" mnemonicParsing="false" onAction="#calcularArea" text="Calcular" />
+      <Label layoutX="360.0" layoutY="394.0" text="Calcular Area:" />
+      <Label fx:id="ok" layoutX="509.0" layoutY="392.0" text="Ok!" textFill="#11bc2a">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

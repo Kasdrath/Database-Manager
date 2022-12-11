@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="anchorPane" prefHeight="633.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectopractica.proyectopractica.controller.insertar.InsertarCompQuimicoController">
+   <children>
+      <Label layoutX="117.0" layoutY="14.0" text="Agregar Componente Químico">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <Pane layoutX="7.0" layoutY="46.0" prefHeight="576.0" prefWidth="467.0">
+         <children>
+            <Label layoutX="22.0" layoutY="25.0" text="CAS Comp. Químico" />
+            <TextField fx:id="casTF" layoutX="181.0" layoutY="21.0" />
+            <Label layoutX="22.0" layoutY="83.0" text="Nombre Comp. Químico" />
+            <TextField fx:id="nombreTF" layoutX="181.0" layoutY="79.0" />
+            <Label layoutX="22.0" layoutY="140.0" text="Familia a la que pertenece" textAlignment="JUSTIFY" />
+            <ComboBox fx:id="combo1" layoutX="180.0" layoutY="136.0" prefWidth="150.0" />
+            <Button layoutX="226.0" layoutY="195.0" mnemonicParsing="false" onAction="#agregarComp" text="Agregar" />
+            <TableView fx:id="tablaCompx" layoutX="19.0" layoutY="315.0" prefHeight="247.0" prefWidth="430.0">
+              <columns>
+                <TableColumn prefWidth="126.0" text="CAS Comp.Quimico" >
+                 <cellValueFactory>
+                    <PropertyValueFactory property="compq_cas" />
+                 </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="152.0" text="Nombre Comp.Quimico" >
+                 <cellValueFactory>
+                    <PropertyValueFactory property="compq_name" />
+                 </cellValueFactory>
+                </TableColumn>
+                 <TableColumn prefWidth="151.0" text="Familia a la que pertenece" >
+                 <cellValueFactory>
+                    <PropertyValueFactory property="familia_name" />
+                 </cellValueFactory>
+                 </TableColumn>
+              </columns>
+            </TableView>
+            <Label layoutX="22.0" layoutY="271.0" text="Visualizar Tabla" />
+            <Button layoutX="119.0" layoutY="267.0" mnemonicParsing="false" onAction="#verTabla" text="Ver" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

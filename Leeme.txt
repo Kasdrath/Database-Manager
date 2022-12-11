@@ -1,0 +1,9 @@
+Proyecto de Consulta y Manejo de Información para el Laboratorio LCGPA
+Universidad del Bio-Bio 2021-2
+Martin Araneda Acuña
+Ingeniería Civil Informática
+
+Software Utilizado:
+-IntelliJ IDEA 2021.3.1 (Ultimate Edition)
+-PostgreSQL 14 (usuario: postgresql, contraseña:hola123)
+-Scene Builder

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectopractica.proyectopractica.controller.eliminar.EliminarTasaCalentController">
+    <children>
+        <Label layoutX="259.0" layoutY="14.0" text="Eliminar Tasa Calent" />
+        <Pane layoutX="14.0" layoutY="31.0" prefHeight="360.0" prefWidth="575.0">
+            <children>
+                <Label layoutX="14.0" layoutY="39.0" text="Eliminar donde" />
+                <ComboBox fx:id="combo1" layoutX="104.0" layoutY="35.0" prefWidth="150.0" />
+                <Label layoutX="104.0" layoutY="14.0" text="Tasa de Calentamiento" />
+                <Button layoutX="262.0" layoutY="35.0" mnemonicParsing="false" onAction="#borrarTasa" text="Borrar" />
+                <TableView fx:id="tablaCalent" layoutX="14.0" layoutY="146.0" prefHeight="204.0" prefWidth="552.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="Tasa Calent">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="tasa_calent" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <Label layoutX="14.0" layoutY="118.0" text="Visualizar Tabla" />
+                <Button layoutX="104.0" layoutY="114.0" mnemonicParsing="false" onAction="#verTabla" text="Ver" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="anchorPane" prefHeight="415.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectopractica.proyectopractica.controller.eliminar.EliminarCompuestoQuimicoController">
+   <children>
+      <Label layoutX="222.0" layoutY="14.0" text="Eliminar Comp Quimico">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="96.0" text="Eliminar donde" />
+      <Label layoutX="113.0" layoutY="66.0" text="Numero CAS" />
+      <TextField fx:id="casTF" layoutX="113.0" layoutY="92.0" />
+      <Button layoutX="275.0" layoutY="92.0" mnemonicParsing="false" onAction="#eliminarComp" text="Eliminar" />
+      <Label layoutX="14.0" layoutY="176.0" text="Visualizar Tabla:" />
+      <Button layoutX="113.0" layoutY="172.0" mnemonicParsing="false" onAction="#verTabla" text="Ver" />
+      <TableView fx:id="tablaCompx" layoutX="13.0" layoutY="200.0" prefHeight="200.0" prefWidth="569.0">
+          <columns>
+              <TableColumn prefWidth="126.0" text="CAS Comp.Quimico" >
+                  <cellValueFactory>
+                      <PropertyValueFactory property="compq_cas" />
+                  </cellValueFactory>
+              </TableColumn>
+              <TableColumn prefWidth="152.0" text="Nombre Comp.Quimico" >
+                  <cellValueFactory>
+                      <PropertyValueFactory property="compq_name" />
+                  </cellValueFactory>
+              </TableColumn>
+              <TableColumn prefWidth="151.0" text="Familia a la que pertenece" >
+                  <cellValueFactory>
+                      <PropertyValueFactory property="familia_name" />
+                  </cellValueFactory>
+              </TableColumn>
+          </columns>
+      </TableView>
+   </children>
+</AnchorPane>

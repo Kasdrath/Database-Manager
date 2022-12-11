@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="113.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectopractica.proyectopractica.ErrorController">
+   <children>
+      <Label layoutX="151.0" layoutY="14.0" text="Error">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextFlow layoutX="78.0" layoutY="50.0" prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Una de las selecciones anteriores es incorrecta, uno de los campos son vacios o un dato se repite en la tabla. Por favor, revíselas." />
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>

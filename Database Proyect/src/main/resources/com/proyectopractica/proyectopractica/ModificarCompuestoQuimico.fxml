@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="anchorPane" prefHeight="326.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectopractica.proyectopractica.controller.modificar.ModificarCompuestoQuimicoController">
+   <children>
+      <Label layoutX="286.0" layoutY="14.0" text="Modificar Compuesto Quimico">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="69.0" text="Se modificara donde CAS sea:" />
+      <Label layoutX="14.0" layoutY="111.0" text="Modificar:" />
+      <TextField fx:id="casTF" layoutX="180.0" layoutY="65.0" />
+      <Label layoutX="14.0" layoutY="138.0" text="Nuevo Nombre:" />
+      <TextField fx:id="nombreTF" layoutX="137.0" layoutY="134.0" />
+      <Label layoutX="14.0" layoutY="183.0" text="Familia perteneciente:" />
+      <ComboBox fx:id="combo1" layoutX="136.0" layoutY="179.0" prefWidth="150.0" />
+      <Button layoutX="14.0" layoutY="225.0" mnemonicParsing="false" onAction="#modificarCompuesto" text="Modificar" />
+      <TableView fx:id="tablaCompx" layoutX="427.0" layoutY="104.0" prefHeight="200.0" prefWidth="392.0">
+        <columns>
+           <TableColumn prefWidth="126.0" text="CAS Comp.Quimico" >
+              <cellValueFactory>
+                 <PropertyValueFactory property="compq_cas" />
+              </cellValueFactory>
+           </TableColumn>
+           <TableColumn prefWidth="152.0" text="Nombre Comp.Quimico" >
+              <cellValueFactory>
+                 <PropertyValueFactory property="compq_name" />
+              </cellValueFactory>
+           </TableColumn>
+           <TableColumn prefWidth="151.0" text="Familia a la que pertenece" >
+              <cellValueFactory>
+                 <PropertyValueFactory property="familia_name" />
+              </cellValueFactory>
+           </TableColumn>
+        </columns>
+      </TableView>
+      <Label layoutX="427.0" layoutY="69.0" text="Visualizar Tabla" />
+      <Button layoutX="519.0" layoutY="65.0" mnemonicParsing="false" onAction="#verTabla" text="Ver" />
+   </children>
+</AnchorPane>
